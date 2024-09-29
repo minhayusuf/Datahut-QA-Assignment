@@ -14,8 +14,8 @@ data_cleaning.py: Python script used to clean the dataset.
  - Matplotlib
  - re 
  - Scipy
- - fuzzywuzzy
- ```
+ - re
+```
 
 To install required libraries, run:  
 ```bash
@@ -56,11 +56,21 @@ Removed outliers based on the interquartile range (IQR).
 * Salary Distribution (Before and After Cleaning)
 * Box Plot of Salary (Before and After Outlier Removal)
 
-  **salary plot(before distribution)**
+ ## **salary plot**
 ![image](https://github.com/user-attachments/assets/60a48898-4787-42f1-8706-e58912612c46)
-8* Updated salary plot **
-![image](https://github.com/user-attachments/assets/8e374c2c-b581-4f47-b9f8-1776367511ca)
+## **Before Handling Noise:**
 
+* The salary distribution plot shows a distinct peak around 90,000, indicating a cluster of values at this point.
+* The box plot on the right indicates a wide range of salaries, with a median around 89,000.
+* The presence of the peak could indicate noise in the data, likely repeated or duplicate values.
+## **Updated salary plot**
+![image](https://github.com/user-attachments/assets/8e374c2c-b581-4f47-b9f8-1776367511ca)
+## **After Handling Noise:**
+
+* The updated salary distribution plot shows a more balanced and uniform spread of values across different salary ranges. The peak around 90,000 has been reduced, which suggests that the noise (e.g., duplicated or erroneous data) has been corrected or smoothed out.
+* The updated box plot reflects this change, with a slightly narrower interquartile range and fewer extreme outliers, suggesting that the salary data is now cleaner and more reflective of a reasonable salary distribution.
+
+In summary, handling the noise in the salary column involved identifying outliers or anomalous patterns (such as the peak at 90,000) and ensuring the salaries fall within a reasonable range, resulting in cleaner and more accurate visualizations.
 # Final Output
 ### After cleaning, the dataset is free from:
 
