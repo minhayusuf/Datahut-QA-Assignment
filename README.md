@@ -3,7 +3,7 @@
 This project demonstrates a step-by-step approach to cleaning a messy dataset (messy_data.csv). The dataset contains inconsistencies such as missing values, duplicates, invalid formats, and noise in several columns. The goal of the project is to clean the dataset and prepare it for further analysis.   
 ## Files
 [messy_data.csv](https://github.com/user-attachments/files/17174145/messy_data.csv): The raw dataset that needs to be cleaned.    
-data_cleaning.py: Python script used to clean the dataset.     
+    
 ## Technologies/Libraries Used  
 ``` javascript
  - Python 3
@@ -14,9 +14,14 @@ data_cleaning.py: Python script used to clean the dataset.
  - Matplotlib
  - re 
  - Scipy
- - re
 ```
-
+*Functionality Breakdown:*
+-Pandas: Used to create a DataFrame and manipulate data.
+- re: To clean the 'Name' and Email column by removing non-alphabetical characters and invald email formats .
+- fuzzywuzzy: To calculate the similarity between department names using fuzzy matching.
+- Seaborn and Matplotlib: For visualizing salary distribution with a KDE plot.
+- Scipy: Used to apply winsorization to the salary data to handle outliers.
+  
 To install required libraries, run:  
 ```bash
 pip install pandas numpy matplotlib seaborn fuzzywuzzy scipy
